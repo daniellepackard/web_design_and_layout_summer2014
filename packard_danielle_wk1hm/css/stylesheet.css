@@ -1,0 +1,308 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* index stylesheet */
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* makes sure that everything is 100% height */
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+}
+
+.header {
+	height: calc(100% - 3em); /* subract an amount of space for arrow element */
+	background-color: #fff;
+	width: 100%;
+}
+
+.main {
+	clear: both;
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+	top: 10px;
+}
+
+/* the wrapper element that will be the outer circle */
+.arrow-wrap {
+	position: absolute;
+	z-index: 1;
+	left: 90%;
+	top: -5em;
+	margin-left: -5em;
+	background-color: rgba(0,0,0,.1);
+	width: 10em;
+	height: 10em;
+	padding: 4em 2em;
+	border-radius: 50%;
+	font-size: 0.5em;
+	display: block;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,.4);
+}
+
+/* a triangle to make the main part of the arrow */
+.arrow {
+	float: left;
+	position: relative;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 3em 3em 0 3em;
+	border-color: #ffffff transparent transparent transparent;
+	-webkit-transform: rotate(360deg);  /* added for better anti-aliasing on webkit browsers */
+}
+
+/* a pseudo element arrow place on top of the other one with the same color as the wrapper */
+.arrow:after {
+	content: '';
+	position: absolute;
+	top: -3.2em;
+	left: -3em;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 3em 3em 0 3em;
+	border-color: #111 transparent transparent transparent;
+	-webkit-transform: rotate(360deg);  /* added for better anti-aliasing on webkit browsers */
+}
+
+/* animation to make the arrow bounce after a delay */
+@-webkit-keyframes arrows {
+	0% { top: 0; }
+	10% { top: 12%; }
+	20% { top: 0; }
+	30% { top: 12%; }
+	40% { top: -12%; }
+	50% { top: 12%; }
+	60% { top: 0; }
+	70% { top: 12%; }
+	80% { top: -12%; }
+	90% { top: 12%; }
+	100% { top: 0; }
+}
+
+.arrow-wrap .arrow {
+	-webkit-animation: arrows 2.8s 0.4s;
+	-webkit-animation-delay: 3s;
+}
+
+/* header */
+header {
+	background-color: #000;
+	width: 100%;
+	height: 448px;
+	margin-bottom: 30px;
+}
+
+header p {
+	text-align: center;
+}
+
+/* name */
+.name {
+	clear: both;
+	float: left;
+	width: 80%;
+	padding: 2%;
+	margin-left: 10%;
+}
+
+.name h1 {
+	color: #000; 
+	font-family: 'Italiana', serif;
+	font-weight: 400;
+	font-size: 2.2em;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #000;
+}
+
+.name h2 {
+	color: #000;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1.3em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding-top: 15px;
+	margin-bottom: 30px;
+}
+
+/* headshot */
+.photo {
+	clear: both;
+	float: left;
+	padding: 2%;
+	margin-left: 10%;
+	margin-top: 100px;
+}
+
+/* bio */
+.bio {
+	float: left;
+	width: 45%;
+	padding: 2%;
+	margin-left: 10%;
+	color: #000;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	letter-spacing: 1px;
+	line-height: 1.2em;
+	padding-top: 15px;
+	margin-top: 100px;
+}
+
+.bio p {
+	margin-bottom: 15px;
+}
+
+span {
+	font-weight: 400;
+	font-style: italic;
+}
+
+/* social icons */
+.bio_social_icons {
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.bio_social_icons img {
+	max-width: 40px;
+}
+
+.bio_social_icons img:hover {
+	background-color: rgba(0,0,0,.2);
+}
+
+/* portfolio panel */
+.portfolio_panel {
+	clear: both;
+	text-align: center;
+}
+
+.portfolio_panel a:hover {
+	background-color: rgba(0,0,0,.2);
+}
+
+/* contact section */
+.contact_section  {
+	text-align: center;
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 100px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.2em;
+	letter-spacing: 1px;	
+}
+
+.contact_section ul {
+	margin-top: 15px;
+}
+
+.contact_section li  {
+	list-style-type: none;
+	font-size: 1em;
+}
+
+h3 {
+	color: #000; 
+	font-family: 'Italiana', serif;
+	font-weight: 400;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #000;
+}
+
+/* footer */
+footer {
+	clear: both;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	color: #000;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: .6em; 
+}
+
+/* navigation links */
+a  {
+	text-decoration: none;
+}
+
+a:link  {
+	color: #000;
+}
+
+a:visited  {
+	color: rgb(105,105,105); /* dim gray */
+}
+
+a:hover  {
+	color: rgb(232,39,113);
+}
