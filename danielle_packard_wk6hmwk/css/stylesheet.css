@@ -1,0 +1,192 @@
+/* stylesheet */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+	background-image: url(../images/seaside_beach_sunset.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+body {
+	width: 960px;
+	background-color: rgb(219,149,93);
+	margin: 0 auto;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 0px solid #d39653;
+	position: relative;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	clear: #000;
+}
+
+/* header */
+h1 {
+	font-family: 'Poiret One', cursive;
+	font-weight: 400;
+	font-size: 3em;
+	position: absolute;
+	top: 10px;
+	margin-left: 25px;
+}
+
+.no_background_hover a:hover  {
+	color: rgb(219,149,93);
+	background-color: rgba(255,255,255,0);
+}
+
+h2 {
+	font-family: 'Poiret One', cursive;
+	font-weight: 600;
+	font-size: .8em;
+	position: absolute;
+	top: 115px;
+	margin-left: 25px; 
+}
+
+/* main nav */
+nav {
+	position: absolute;
+	top: 0;
+	right: 15px;
+}
+
+nav li {
+	display: inline-block;
+	font-size: .8em;
+	padding: 15px;
+}
+
+/* header social icons */
+.social_icons {
+	position: absolute;
+	top: 50px;
+	right: 25px;
+}
+
+.social_icons img {
+	max-width: 25px;
+}
+
+.social_icons img:hover {
+	background-color: rgba(255,255,255,.5);
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.social_icons li {
+	display: inline;
+}
+
+/* main content */
+.main_content {
+	margin-top: 30px;
+}
+
+.intro {
+	text-align: left;
+	font-size: .8em;
+	line-height: 1.4em;
+	letter-spacing: 1.5px;
+	padding: 0 175px 0 175px;
+	margin-bottom: 30px;
+}
+
+span {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+.products {
+	max-width: 960px;
+	margin-bottom: 30px;
+}
+
+.products ul li {
+	display: inline-block;
+	max-width: 236.5px;
+}
+
+.products img:hover {
+	background-color: rgba(255,255,255,0);
+}
+
+.products:after {  /* clear fix after products */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.blog {
+	text-align: left;
+	font-size: .8em;
+	line-height: 1.4em;
+	letter-spacing: 1px;
+	padding: 0 175px 50px 175px;
+}
+
+.blog section {
+	margin-bottom: 30px;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: 400;
+}
+
+h4 {
+	font-size: .8em;
+	font-weight: 400;
+}
+
+.blog_link {
+	text-decoration: underline;
+	font-weight: 400;
+}
+
+/* footer */
+footer {
+	position: absolute;
+	bottom: 15px;
+	left: 175px;
+	right: 200px;
+	font-size: .5em;
+	font-weight: 400;
+	letter-spacing: 1px;
+	border-top: 1px solid #000;
+	padding-top: 5px;
+}
+
+/* navigation links */
+a  {
+	text-decoration: none;
+}
+
+a:link {
+	color: #000;
+}
+
+a:visited  {
+	color: rgb(43,64,115);
+}
+
+a:hover  {
+	color: rgb(219,149,93);
+	background-color: rgba(255,255,255,.2);
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	padding: 0 2px 0 2px;
+}
+
+
+
